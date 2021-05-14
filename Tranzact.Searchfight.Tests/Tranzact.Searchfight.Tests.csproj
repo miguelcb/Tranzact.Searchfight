@@ -49,11 +49,25 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Core\SearchManagerTest.cs" />
+    <Compile Include="SearchEngines\BingSearchTest.cs" />
+    <Compile Include="SearchEngines\GoogleSearchTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Tranzact.Searchfight.Core\Tranzact.Searchfight.Core.csproj">
+      <Project>{458ac74b-eba7-4497-9b34-e1bf73249175}</Project>
+      <Name>Tranzact.Searchfight.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tranzact.Searchfight.Services\Tranzact.Searchfight.Services.csproj">
+      <Project>{446055d7-e284-400f-b5aa-63976d623934}</Project>
+      <Name>Tranzact.Searchfight.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
